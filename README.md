@@ -1,6 +1,6 @@
-**Задание 1**
+![image](https://github.com/user-attachments/assets/0b6304d0-504b-4495-990b-55a829fa1fed)**Задание 1**
 
-1. Изучите проект.
+1.Изучите проект.
 
 2.Заполните файл personal.auto.tfvars.
 
@@ -46,6 +46,31 @@ variable "each_vm" {
 
 
 **Решение 2**
+
+
+Создадим файл locals.tf с описанием переменной metadata и укажем там путь к нашему открытому ключу, к которому мы будем цепляться после создания ВМ
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/fc9a6637a63ce787a723cd48aee3820b1635b406/IMG/4.jpg)
+
+
+Далее в variables.tf добавим составную map-переменную для создания 2 типов машин с разными ресурсами
+
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/fc9a6637a63ce787a723cd48aee3820b1635b406/IMG/5.jpg)
+
+
+Создадим файл count_vm.tf где опишем процесс создания 2 идентичных машин с помощью счетчика count
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/fc9a6637a63ce787a723cd48aee3820b1635b406/IMG/6.jpg)
+
+
+В файле variables.tf создадим перменную для описания ресурсов машин баз данных.
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/a969a9a00a4be681f86cc6931bf218235d394f71/IMG/8.jpg)
+
+И теперь создадим фаил for_each-vm.tf где опишем создание самих машин для БД
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/a969a9a00a4be681f86cc6931bf218235d394f71/IMG/9.jpg)
 
 
 
