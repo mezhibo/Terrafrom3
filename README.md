@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0b6304d0-504b-4495-990b-55a829fa1fed)**Задание 1**
+**Задание 1**
 
 1.Изучите проект.
 
@@ -73,4 +73,33 @@ variable "each_vm" {
 ![alt text](https://github.com/mezhibo/Terrafrom3/blob/a969a9a00a4be681f86cc6931bf218235d394f71/IMG/9.jpg)
 
 
+Применим terraform apply
+
+Перейдем в веб-интерфейс, и видим что у нас созадлось 2 идентичных веб-машины, и 2 машины с разными ресурсами под БД
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/f6d5ad9479b8b87f89368cd14896e22d2f97373f/IMG/10.jpg)
+
+
+
+**Задание 3**
+
+1.Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле disk_vm.tf .
+
+2.Создайте в том же файле одиночную(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage" . Используйте блок dynamic secondary_disk{..} и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
+
+
+
+**Решение 3**
+
+
+Создадим файлик disk_vm.tf где опишем создание ВМ и 3 дополнительных дисков через count
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/c964dd80690d67391cf350522eab8ecde86151df/IMG/11.jpg)
+
+
+Перейдем в веб-интерфейс и првоерим что создалось там
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/c964dd80690d67391cf350522eab8ecde86151df/IMG/12.jpg)
+
+Все отлично
 
