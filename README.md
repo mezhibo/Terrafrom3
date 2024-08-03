@@ -131,3 +131,31 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 
 Удалите все созданные ресурсы.
 
+
+**Решение 4**
+
+Создадим файл ansible.tf
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/8d288cfced4442c1d0420e58ec61fb13719cf147/IMG/20.jpg)
+
+Создадим файл шаблона hosts.tftpl 
+
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/8d288cfced4442c1d0420e58ec61fb13719cf147/IMG/21.jpg)
+
+Создадим заново всю ифнраструкуттуру 
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/8d288cfced4442c1d0420e58ec61fb13719cf147/IMG/22.jpg)
+
+
+Видим что у нас согласно шаблону создался файл инвентаризации host.cfg
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/8d288cfced4442c1d0420e58ec61fb13719cf147/IMG/23.jpg)
+
+Теперь делаем terraform destroy и видим что все что создано через terraform, будет удалено, соотвественно и файл инвентаризации тоже 
+
+
+![alt text](https://github.com/mezhibo/Terrafrom3/blob/8d288cfced4442c1d0420e58ec61fb13719cf147/IMG/24.jpg)
+
+
+[ССЫЛКА НА РЕПОЗИТОРЙИ С ФАЙЛАМИ ИЗ ДОМАШНЕЙ РАБОТЫ](https://github.com/mezhibo/ter-homeworks/tree/b354525df66c734ce49b0c71fc87234ccd1748af/03/src)
